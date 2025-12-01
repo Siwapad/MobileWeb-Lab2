@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KKU Campus Guide — แนะนำสถานที่ในมหาวิทยาลัยขอนแก่น</title>
+    <style>
+      /* Reset + Box Model */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --accent: #2b6cb0;
+        --muted: #6b7280;
+        --glass: rgba(255, 255, 255, 0.6);
+      }
+
+      body {
+        font-family: "Segoe UI", Roboto, "Noto Sans Thai", sans-serif;
+        background: linear-gradient(180deg, var(--bg), #ffffff);
+        color: #222;
+        line-height: 1.5;
+        padding: 20px;
+      }
+
+      header {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .branding {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .logo {
+        width: 68px;
+        height: 68px;
+        border-radius: 12px;
+        background: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        box-shadow: 0 6px 18px rgba(43, 108, 176, 0.18);
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+      p.lead {
+        color: var(--muted);
+        margin-top: 6px;
+        font-size: 0.95rem;
+      }
+
+      .student-info {
+        text-align: right;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .student-info b {
+        color: #111;
+      }
+
+      nav {
+        margin: 12px 0 24px 0;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      nav a {
+        padding: 8px 12px;
+        background: var(--card);
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--accent);
+        border: 1px solid rgba(43, 108, 176, 0.08);
+        box-shadow: 0 6px 14px rgba(43, 108, 176, 0.06);
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      section.card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+        border: 1px solid rgba(16, 24, 40, 0.04);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-height: 260px;
+      }
+
+      section.card h2 {
+        font-size: 1.08rem;
+        color: var(--accent);
+      }
+      section.card p.desc {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      figure {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        background: var(--glass);
+        border: 1px solid rgba(16, 24, 40, 0.04);
+      }
+
+      figure img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      figure:hover img {
+        transform: scale(1.06);
+      }
+
+      figcaption {
+        padding: 8px;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      footer {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive: mobile first adjustments */
+      @media (max-width: 1000px) {
+        main {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        figure img {
+          height: 110px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+        .student-info {
+          text-align: left;
+        }
+        nav {
+          width: 100%;
+          overflow: auto;
+        }
+        main {
+          grid-template-columns: 1fr;
+        }
+        figure img {
+          height: 160px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <div class="logo">KKU</div>
+        <div>
+          <h1>KKU Campus Guide</h1>
+          <p class="lead">
+            แนะนำสถานที่น่าสนใจภายในมหาวิทยาลัยขอนแก่น —
+            เพื่อการเรียนรู้และพักผ่อน
+          </p>
+        </div>
+      </div>
+
+      <div class="student-info">
+        <!-- เปลี่ยนเป็นรหัสและชื่อจริงของคุณ -->
+        รหัสนักศึกษา: <b>663380026-5</b><br />
+        ชื่อ-สกุล: <b>นายศิวภาส ภูศรีอ่อน</b>
+      </div>
+    </header>
+
+    <nav aria-label="เมนูสถานที่">
+      <a href="#library">หอสมุด</a>
+      <a href="#garden">สวนและพื้นที่สีเขียว</a>
+      <a href="#stadium">สนามกีฬา</a>
+      <a href="#food">ศูนย์อาหารนักศึกษา</a>
+    </nav>
+
+    <main>
+      <section id="library" class="card" aria-labelledby="lib-title">
+        <h2 id="lib-title">หอสมุดกลาง (Central Library)</h2>
+        <p class="desc">
+          หอสมุดกลางของมหาวิทยาลัยเป็นศูนย์ทรัพยากรทางการศึกษา ขนาดใหญ่
+          เหมาะสำหรับการอ่าน ค้นคว้า และใช้บริการอินเทอร์เน็ตความเร็วสูง
+          มีพื้นที่อ่านหนังสือทั้งแบบเงียบและแบบกลุ่ม
+        </p>
+        <div class="gallery" role="list">
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+              alt="ชั้นหนังสือในห้องสมุด"
+            />
+            <figcaption>ชั้นหนังสือและมุมอ่านหนังสือ</figcaption>
+          </figure>
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop"
+              alt="พื้นที่อ่านและโต๊ะคอมพิวเตอร์"
+            />
+            <figcaption>พื้นที่คอมพิวเตอร์และห้องประชุมย่อย</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="garden" class="card" aria-labelledby="garden-title">
+        <h2 id="garden-title">สวนและพื้นที่สีเขียว (Campus Garden)</h2>
+        <p class="desc">
+          พื้นที่สีเขียวเป็นจุดพักผ่อนยอดนิยมของนักศึกษา
+          เหมาะสำหรับวิ่งออกกำลังกาย เดินเล่น และถ่ายรูป
+          มีเงาไม้และม้านั่งหลายจุดให้พักผ่อน
+        </p>
+        <div class="gallery" role="list">
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop"
+              alt="ต้นไม้และทางเดินในมหาวิทยาลัย"
+            />
+            <figcaption>ทางเดินร่มรื่นใต้ต้นไม้</figcaption>
+          </figure>
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop"
+              alt="ม้านั่งและพื้นที่พักผ่อน"
+            />
+            <figcaption>มุมพักผ่อนและสนามหญ้า</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="stadium" class="card" aria-labelledby="stadium-title">
+        <h2 id="stadium-title">สนามกีฬา (University Stadium)</h2>
+        <p class="desc">
+          สนามกีฬามีทั้งสนามฟุตบอล สนามเทนนิส และสนามกีฬาในร่ม
+          เหมาะสำหรับการฝึกซ้อม การแข่งขัน และการจัดกิจกรรมสุขภาพของมหาวิทยาลัย
+        </p>
+        <div class="gallery" role="list">
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=800&auto=format&fit=crop"
+              alt="สนามฟุตบอลของมหาวิทยาลัย"
+            />
+            <figcaption>สนามฟุตบอลและอัฒจันทร์</figcaption>
+          </figure>
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1543862470-6d3d5b5693a0?q=80&w=800&auto=format&fit=crop"
+              alt="ยิมกีฬาในร่ม"
+            />
+            <figcaption>ยิมในร่มสำหรับกีฬาต่าง ๆ</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="food" class="card" aria-labelledby="food-title">
+        <h2 id="food-title">ศูนย์อาหารนักศึกษา (Student Food Center)</h2>
+        <p class="desc">
+          ศูนย์อาหารเป็นแหล่งรวมร้านอาหารหลากหลาย ราคานักศึกษา มีทั้งอาหารไทย
+          อาหารจานด่วน และเครื่องดื่ม เหมาะสำหรับมื้อกลางวันหลังเลิกเรียน
+        </p>
+        <div class="gallery" role="list">
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1498654206009-6f8e6a2c1f0f?q=80&w=800&auto=format&fit=crop"
+              alt="บรรยากาศศูนย์อาหาร"
+            />
+            <figcaption>โซนร้านอาหารหลากหลาย</figcaption>
+          </figure>
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1499744937866-d9e6f5aee9c2?q=80&w=800&auto=format&fit=crop"
+              alt="อาหารและเครื่องดื่มนักศึกษา"
+            />
+            <figcaption>ตัวอย่างเมนูยอดนิยมราคาประหยัด</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © มหาวิทยาลัยขอนแก่น — หน้าแนะนำสถานที่ | ออกแบบโดยนักศึกษาผู้จัดทำ
+    </footer>
+  </body>
+</html>
