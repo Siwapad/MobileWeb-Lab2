@@ -8,7 +8,7 @@ import { defineConfig } from "vite";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), legacy()],
-  base: "/MobileWeb-Lab/lab01_vue/",
+  base: "/MobileWeb-Lab2/lab01_vue/",
   build: {
     outDir: path.resolve(__dirname, "../../docs/lab01_vue"),
     emptyOutDir: true,
